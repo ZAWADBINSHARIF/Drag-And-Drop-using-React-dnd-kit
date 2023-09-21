@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+.App{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    background-color: white;
+    color: black;
+    overflow: hidden;
+}
+
+.TodoBox{
+    width: 100%;
+    height: 60px;
+    margin-bottom: 16px;
+    text-align: center;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.FirstContainer{
+    width: 300px;
+    height: 600px;
+    padding: 16px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+    align-items: start;
+}
+
+.SecondContainer{
+    width: 300px;
+    height: 600px;
+    padding: 16px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+    align-items: start;
+}
