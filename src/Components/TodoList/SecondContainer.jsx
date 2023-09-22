@@ -18,6 +18,7 @@ const SecondContainer = (props) => {
     return (
         <div className="SecondContainer" ref={setNodeRef} style={style}>
             <h2>Done</h2>
+            <br/>
             {props.todos.map(todo => (
                 <TodoBox key={todo.id} id={todo.id} note={todo.note} />
             ))}

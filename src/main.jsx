@@ -7,7 +7,7 @@ import { Route, createBrowserRouter, RouterProvider, createRoutesFromElements } 
 import App from './App.jsx'
 import TodoList from './pages/TodoList.jsx'
 import ProjectList from './Components/ProjectList.jsx'
-import SimpleDragging from './Components/SimpleDragging/SimpleDragging.jsx'
+import SimpleDragging from './pages/SimpleDragging.jsx'
 
 import './index.css'
 

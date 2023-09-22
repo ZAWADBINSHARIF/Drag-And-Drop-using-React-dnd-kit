@@ -44,6 +44,15 @@ main{
     justify-content: center;
 }
 
+.BigContainer{
+    width: 1000px;
+    height: 600px;
+    position: relative;
+    margin: 0 32px;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
 .FirstContainer, .ProjectList{
     width: 300px;
     height: 600px;
@@ -64,4 +73,14 @@ main{
     flex-direction: column;
     justify-self: start;
     align-items: start;
+}
+
+.Box{
+    width: 200px;
+    height: 60px;
+    position: absolute;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

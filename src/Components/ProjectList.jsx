@@ -13,8 +13,8 @@ const ProjectList = () => {
             link: "/todolist"
         },
         {
-            name: "Todo List",
-            link: "/todolist"
+            name: "Simple Draggin",
+            link: "/simple-dragging"
         }
     ]
 

@@ -28,7 +28,6 @@ const TodoList = () => {
 
     function handleDragEnd(event) {
         const { over, active } = event
-        console.log(event)
 
         if (!over) return
 
