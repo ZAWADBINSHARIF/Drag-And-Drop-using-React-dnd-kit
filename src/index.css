@@ -2,18 +2,35 @@
     padding: 0;
     margin: 0;
     box-sizing: 0;
+    border-radius: 32px;
 }
 
-.App{
+a{
     width: 100%;
-    height: 100vh;
+    text-decoration: none;
+    color: black;
+}
+
+header{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    padding: 32px;
+}
+
+main{
+    width: 100%;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: start;
     flex-direction: row;
     background-color: white;
     color: black;
     overflow: hidden;
+}
+
+.ProjectList>a:hover{
+    scale: 1.009;
 }
 
 .TodoBox{
@@ -27,7 +44,7 @@
     justify-content: center;
 }
 
-.FirstContainer{
+.FirstContainer, .ProjectList{
     width: 300px;
     height: 600px;
     padding: 16px;
