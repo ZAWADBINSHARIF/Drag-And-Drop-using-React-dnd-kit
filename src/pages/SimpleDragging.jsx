@@ -1,5 +1,5 @@
 // external import
-import { DndContext } from "@dnd-kit/core"
+import { DndContext, MouseSensor, TouchSensor, useSensor } from "@dnd-kit/core"
 
 // internal import
 import BigContainer from "../Components/SimpleDragging/BigContainer"
@@ -38,8 +38,23 @@ const SimpleDragging = () => {
     }
   ])
 
+  const mouseSensor = useSensor(MouseSensor, {
+    activationConstraint: {
+      distance: 10
+    }
+  })
+
+  const touchSensor = useSensor(TouchSensor, {
+    activationConstraint: {
+      tolerance: 5
+    }
+  })
+
   return (
-    <DndContext onDragEnd={handleDragEnd}>
+    <DndContext
+      onDragEnd={handleDragEnd}
+      sensors={[touchSensor, mouseSensor]}
+    >
       <BigContainer boxs={boxs} />
     </DndContext>
   )

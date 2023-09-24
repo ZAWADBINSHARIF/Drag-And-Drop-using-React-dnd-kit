@@ -1,5 +1,5 @@
 // external import
-import { DndContext } from "@dnd-kit/core"
+import { DndContext, MouseSensor, TouchSensor, useSensor } from "@dnd-kit/core"
 import { useState } from "react"
 
 // internal import
@@ -15,10 +15,25 @@ const TodoList = () => {
         { id: 5, note: "Orange" },
     ])
 
+    const mouseSensor = useSensor(MouseSensor, {
+        activationConstraint: {
+            distance: 10
+        }
+    })
+
+    const touchSensor = useSensor(TouchSensor, {
+        activationConstraint: {
+            tolerance: 5
+        }
+    })
+
     const [secondTodos, setSecondTodos] = useState([])
 
     return (
-        <DndContext onDragEnd={handleDragEnd}>
+        <DndContext
+            onDragEnd={handleDragEnd}
+            sensors={[mouseSensor, touchSensor]}
+        >
 
             <FirstContainer todos={firstTodos} />
             <SecondContainer todos={secondTodos} />
